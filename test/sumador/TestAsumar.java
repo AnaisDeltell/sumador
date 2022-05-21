@@ -19,5 +19,11 @@ class TestAsumar {
 	        String resultado = sumi.sumativo("-5");
 	        assertEquals("Negativo. Siempre negativo.",resultado );
 	    }
+	 @Test
+	    public void testMasCifras() {
+	        ASumar sumi = new ASumar();
+	        String resultado = sumi.sumativo("123");
+	        assertEquals("1 + 2 + 3 = 6",resultado );
+	    }
 
 }
