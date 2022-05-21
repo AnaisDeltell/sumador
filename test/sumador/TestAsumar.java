@@ -6,9 +6,11 @@ import org.junit.jupiter.api.Test;
 
 class TestAsumar {
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+	 @Test
+	    public void testUnaCifra() {
+	        ASumar sumi = new ASumar();
+	        String resultado = sumi.sumativo("5");
+	        assertEquals("5 = 5",resultado );
+	    }
 
 }
