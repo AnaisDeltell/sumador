@@ -5,20 +5,21 @@ package sumador;
  *
  */
 public class ASumar {
+	private static final String NO_VÁLIDO = "No válido";
+	private static final String NEGATIVO = "Negativo. Siempre negativo.";
 	/**
 	 * @param cad
 	 * @return
 	 */
 	public String sumativo(String cad) {
 		String numero = cad; 
-        if (numero.length() == 1) {
+        if (numero.length() == 1) { //1 digito
            return (numero + " = " + numero);       
-	} else if (numero.charAt(0) == '-') {
-	return "Negativo. Siempre negativo.";
-	} else if (cad.length() > 1) {		 		
+	} else if (numero.charAt(0) == '-') { //Numero negativo
+	return NEGATIVO; 
+	} else if (cad.length() > 1) { //Mas de 1 digito.		 		
 		 numero = "";
-			for (int i = 0; i < cad.length(); i++) {   
-	                   
+			for (int i = 0; i < cad.length(); i++) {         
 		            numero = numero + cad.substring(i,i+1);  
 		            if (i < cad.length()-1) {
 		            	numero = numero +" + ";
@@ -29,7 +30,7 @@ public class ASumar {
 			numero = numero + String.valueOf(total(cad));		
 			return numero;
 	}
-	return "No válido";
+	return NO_VÁLIDO;
 }	
 	/**
 	 * @param valor_inicial
